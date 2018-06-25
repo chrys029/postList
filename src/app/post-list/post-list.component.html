@@ -1,0 +1,18 @@
+
+<li [ngClass]="{'list-group-item': true,  'list-group-item-success': compteurValue ==='sup',
+'list-group-item-danger': compteurValue === 'inf'}">
+  <div class="row">
+    <div class="col-xs-6"><h3>{{postTitle}}</h3></div>
+    <div class="col-xs-6" style="text-align: right;">{{getDate() | date}}</div>
+  </div>
+  <br>
+  <div style="text-align: justify ;">{{postContent}}</div>
+  <br>
+  <div class="row" >
+    <button style="width:150px;margin:5px;" class="btn btn-success" (click)="onLike()">LOVE IT</button>
+    <button style="width:150px;margin:5px;" class="btn btn-danger" (click)="onDislike()">DON'T LOVE IT</button>
+    <div hidden> compteur: {{compteur}} </div>
+    <button style="width:150px;margin:5px; float:right; margin-right: 40px" class="btn btn-danger" (click)="onDelete()">SUPPRIMER</button>
+  </div>
+<br>
+</li>
